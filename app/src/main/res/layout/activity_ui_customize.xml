@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".UiCustomizeActivity"
+
+    >
+<FrameLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    >
+
+  <com.google.android.exoplayer2.ui.PlayerView
+
+
+      app:controller_layout_id="@layout/exo_playback_control_view"
+      android:id="@+id/player_view"
+      app:use_controller="true"
+      app:fastforward_increment="10000"
+      app:rewind_increment="1000"
+      app:repeat_toggle_modes="one"
+      app:show_timeout="10000"
+      android:layout_width="match_parent"
+      app:show_shuffle_button="true"
+      android:layout_height="match_parent"
+      />
+
+  <!--<ImageButton android:id="@id/exo_play"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_gravity="center"
+      android:background="#CC000000"
+      style="@style/ExoMediaButton.Play"/>
+
+  <ImageButton android:id="@id/exo_pause"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_gravity="center"
+      android:background="#CC000000"
+      style="@style/ExoMediaButton.Pause"/>
+  -->
+</FrameLayout>
+  <com.google.android.exoplayer2.ui.PlayerControlView
+      android:visibility="gone"
+      android:id="@+id/player_control_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
